@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<link href="/display.css" rel="stylesheet">
+</head>
+<body>
+	<p>
+		<span th:text="${message}"></span>
+	</p>
+	<div th:object="${prescription}">
+		<table>
+			<tr>
+				<td>Rx:</td>
+				<td><span th:text="*{RXNumber}"></span></td>
+			</tr>
+			<tr>
+				<td>Doctor ID:</td>
+				<td><span th:text="*{Doctor_SSN}"></span></td>
+			</tr>
+			<tr>
+				<td>Doctor First Name:</td>
+				<td><span th:text="*{doctorFirstName}"></span></td>
+			</tr>
+			<tr>
+				<td>Doctor Last Name:</td>
+				<td><span th:text="*{doctorLastName}"></span></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Patient ID:</td>
+				<td><span th:text="*{Patient_SSN}"></span></td>
+			</tr>
+			<tr>
+				<td>Patient First Name:</td>
+				<td><span th:text="*{patientFirstName}"></span></td>
+			</tr>
+			<tr>
+				<td>Patient Last Name:</td>
+				<td><span th:text="*{patientLastName}"></span></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Drug ID:</td>
+				<td><span th:text="*{drugID}"></span></td>
+			</tr>
+			<tr>
+				<td>Drug Name:</td>
+				<td><span th:text="*{drugName}"></span></td>
+			</tr>
+			<tr>
+				<td>Quantity:</td>
+				<td><span th:text="*{quantity}"></span></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Date Prescribed:</td>
+				<td><span th:text="*{prescribeDate}"></span></td>
+			</tr>
+			<tr>
+				<td>Date Filled:</td>
+				<td><span th:text="*{fillDate}"></span></td>
+			</tr>
+		</table>
+
+		<p>
+			<a href="/">Main Menu</a>
+		</p>
+	</div>
+</body>
+</html>
